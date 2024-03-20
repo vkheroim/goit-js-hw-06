@@ -13,16 +13,19 @@ class Storage {
     this.#items.push(newItem);
   }
 
+  // removeItem(itemToRemove) {
+  //   let index = this.#items.indexOf(itemToRemove);
+
+  //   if (index === -1) {
+  //     return console.log("Item not found");
+  //   }
+
+  //   this.#items.splice(index, 1);
+
+  //   return this.#items;
+  // }
   removeItem(itemToRemove) {
-    let index = this.#items.indexOf(itemToRemove);
-
-    if (index === -1) {
-      return console.log("Item not found");
-    }
-
-    this.#items.splice(index, 1);
-
-    return this.#items;
+    this.#items = this.#items.filter((item) => item !== itemToRemove);
   }
 }
 
